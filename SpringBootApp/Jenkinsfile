@@ -16,14 +16,14 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 // Build the Docker image using the Dockerfile in your repository
-                sh 'docker build -t iamkarn07/your-springboot-app:latest .'
+                sh 'docker build -t iamkarn07/phase5project:latest .'
             }
         }
         stage('Push Docker Image') {
             steps {
                 // Push the Docker image to Docker Hub
                 sh 'docker login -u iamkarn07 -p **************'
-                sh 'docker push iamkarn07/your-springboot-app:latest'
+                sh 'docker push iamkarn07/phase5project:latest'
             }
         }
     }
